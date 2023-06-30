@@ -29,13 +29,14 @@ public class Employee {
 		
 		char[] DesignationCode = {'e','c','k','r','m'};
 		
-		String[] Designation = {"Enginer", "Consultant", "Clerk","Receptionist"};
+		String[] Designation = {"Engineer", "Consultant", "Clerk","Receptionist"};
 		
 		double[] DA = {20000, 32000, 12000, 15000, 40000};
 		
 		int flag = 0;
 		
-		int id = Integer.parseInt(args[0]);
+		Scanner sc = new Scanner(System.in);
+		int id = sc.nextInt();
 		
 		for(int i=0; i<EmpId.length ; i++)
 		{
@@ -44,13 +45,13 @@ public class Employee {
 				flag = 1;
 				System.out.println("Emp Id.		Emp Name		Department		Dsignation		DA");
 				
-				System.out.print(EmpId[i]+""+EmpName[i]+""+Department[i]);
+				System.out.print(EmpId[i]+"		"+EmpName[i]+"			"+Department[i]);
 				
 				for(int j=0; j<DesignationCode.length ;j++)
 				{
 					if(DesigCode[i]==DesignationCode[j])
 					{
-						System.out.print("	"+Designation[j]+"	");
+						System.out.print("			"+Designation[j]+"		");
 						
 						double sum = basic[i] + HRA[i] +DA[j] - IT[i];
 						
